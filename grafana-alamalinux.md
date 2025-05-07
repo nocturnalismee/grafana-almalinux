@@ -13,7 +13,7 @@ wget -q -O gpg.key https://rpm.grafana.com/gpg.key
 sudo rpm --import gpg.key
 ```
 ## Buat repository /etc/yum.repos.d/grafana.repo
-`
+```bash
 [grafana]
 name=grafana
 baseurl=https://rpm.grafana.com
@@ -23,7 +23,7 @@ gpgcheck=1
 gpgkey=https://rpm.grafana.com/gpg.key
 sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
-`
+```
 
 # Update System ulang
 
