@@ -61,15 +61,15 @@ sudo systemctl status httpd
 ```
 
 ## Buat Apache Virtual Host File dan Reverse Proxy
-* Pembuatan Apache Virtual Host File dan reverse proxy ini agar grafana dapat diakses melalui domain. *
+* Pembuatan Apache Virtual Host File dan reverse proxy ini agar grafana dapat diakses melalui domain. 
 ```bash
 sudo nano /etc/httpd/conf.d/grafana.conf
 ```
 
 ## Configurasi Apache Virtual Host File
-*//* Masukan kode berikut ke dalam Apache Virtual Host File
-
-`<VirtualHost *:80>
+* Masukan kode berikut ke dalam Apache Virtual Host File
+```bash
+<VirtualHost *:80>
      ServerName yourdomain.com
      DocumentRoot /var/www/html/
      <Directory /var/www/html/>
@@ -85,7 +85,7 @@ sudo nano /etc/httpd/conf.d/grafana.conf
      ErrorLog /var/log/httpd/yourdomain.com_error.log
      CustomLog /var/log/httpd/yourdomain.com.log combined
 </VirtualHost>
-`
+```
 ## Cek Syntak
 ```bash
 httpd -t
